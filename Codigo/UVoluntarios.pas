@@ -9,7 +9,6 @@ uses
 
 type
   TVoluntarios = class(TForm)
-    DataSource1: TDataSource;
     sqlAux: TSQLQuery;
     Image1: TImage;
     LadoEsquerdo: TPanel;

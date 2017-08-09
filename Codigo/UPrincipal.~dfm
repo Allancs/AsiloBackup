@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 167
-  Top = 138
+  Left = 232
+  Top = 154
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -1315,7 +1315,7 @@ object Principal: TPrincipal
       Width = 249
       Height = 17
       DataField = 'DATA'
-      DataSource = Modulo.dsAviso
+      DataSource = DataSource1
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -1329,7 +1329,7 @@ object Principal: TPrincipal
       Width = 265
       Height = 17
       DataField = 'OBS'
-      DataSource = Modulo.dsAviso
+      DataSource = DataSource1
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -1532,6 +1532,15 @@ object Principal: TPrincipal
       77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
+  object Button1: TButton
+    Left = 664
+    Top = 56
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 17
+    OnClick = Button1Click
+  end
   object PoupUP: TTimer
     Interval = 1
     OnTimer = PoupUPTimer
@@ -1636,6 +1645,27 @@ object Principal: TPrincipal
   object Check: TTimer
     Interval = 1
     Left = 632
+    Top = 16
+  end
+  object sdsAux: TSimpleDataSet
+    Aggregates = <>
+    Connection = Modulo.Conexao
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 704
+    Top = 16
+    object sdsAuxOBS: TStringField
+      FieldName = 'OBS'
+      Size = 100
+    end
+    object sdsAuxDATA: TDateField
+      FieldName = 'DATA'
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = sdsAux
+    Left = 672
     Top = 16
   end
 end

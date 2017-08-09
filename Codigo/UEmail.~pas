@@ -50,9 +50,6 @@ type
     Label1: TLabel;
     SpeedButton1: TSpeedButton;
     BitBtn2: TBitBtn;
-    BitBtn6: TBitBtn;
-    BitBtn5: TBitBtn;
-    BitBtn1: TBitBtn;
     getEmail: TDBEdit;
     Label10: TLabel;
     edtPesquisa: TEdit;
@@ -61,6 +58,9 @@ type
     Voluntarios: TRadioButton;
     EmailReal: TLabel;
     Timer1: TTimer;
+    BitBtn1: TBitBtn;
+    BitBtn6: TBitBtn;
+    BitBtn5: TBitBtn;
     procedure FormCreate(Sender: TObject);
     procedure edtPesquisaChange(Sender: TObject);
     procedure DBCellClick(Column: TColumn);

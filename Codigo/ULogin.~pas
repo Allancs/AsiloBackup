@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, ShellApi, StdCtrls, jpeg, ExtCtrls, Buttons;
+  Dialogs, ShellApi, StdCtrls, jpeg, ExtCtrls, Buttons, IniFiles;
 
 type
   TLogin = class(TForm)
@@ -22,6 +22,8 @@ type
     procedure Image2Click(Sender: TObject);
     procedure mrCancelClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   Tentativas : Smallint;
@@ -106,5 +108,43 @@ procedure TLogin.btnCancelarClick(Sender: TObject);
 begin
 Application.Terminate;
 end;
+
+procedure TLogin.FormCreate(Sender: TObject);
+var
+Arquivo: TIniFile;
+Begin
+ Try
+     Arquivo:= TIniFile.Create(ExtractFilePath(Application.ExeName)+'CONF_LOGIN.ini');
+     with Modulo.Conexao do
+     begin
+       Params.Values['DATABASE'] := Arquivo.ReadString('DADOS','DATABASE','');
+       Params.Values['USERNAME'] := Arquivo.ReadString('DADOS','USERNAME','');
+       Params.Values['PASSWORD'] := Arquivo.ReadString('DADOS','PASSWORD','');
+       Arquivo.Free
+     end;
+  Except
+    ShowMessage('Não foi possivel conectar! Nenhum servidor disponível...');
+  End;
+end;
+
+procedure TLogin.FormShow(Sender: TObject);
+var
+Arquivo: TIniFile;
+Begin
+ Try
+     Arquivo:= TIniFile.Create(ExtractFilePath(Application.ExeName)+'CONF_BANCO.ini');
+     with Modulo.Conexao do
+     begin
+       Params.Values['CONNECTIONNAME'] := Arquivo.ReadString('DADOS','CONNECTIONNAME','');
+       Params.Values['DATABASE'] := Arquivo.ReadString('DADOS','DATABASE','');
+       Params.Values['USERNAME'] := Arquivo.ReadString('DADOS','USERNAME','');
+       Params.Values['PASSWORD'] := Arquivo.ReadString('DADOS','PASSWORD','');
+       Arquivo.Free
+     end;
+
+  Except
+    ShowMessage('Não foi possivel conectar! Nenhum servidor disponível...');
+  End;
+  end;
 
 end.

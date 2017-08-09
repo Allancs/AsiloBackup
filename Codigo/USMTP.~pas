@@ -37,6 +37,7 @@ type
     OQue2: TMemo;
     URL: TEdit;
     Label6: TLabel;
+    Label7: TLabel;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);

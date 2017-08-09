@@ -3,7 +3,7 @@ object Modulo: TModulo
   Left = 231
   Top = 162
   Height = 571
-  Width = 669
+  Width = 890
   object Conexao: TSQLConnection
     ConnectionName = 'Asilo'
     DriverName = 'Interbase'
@@ -12,7 +12,7 @@ object Modulo: TModulo
     LoginPrompt = False
     Params.Strings = (
       'DriverName=Interbase'
-      'Database=PC:C:\Asilo\Banco\BANCO.FDB'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
       'RoleName=RoleName'
       'User_Name=sysdba'
       'Password=masterkey'
@@ -31,6 +31,7 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
+    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -354,6 +355,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsConta: TSQLDataSet
+    Active = True
     CommandText = 'select * from CONTAS'
     MaxBlobSize = -1
     Params = <>
@@ -362,6 +364,7 @@ object Modulo: TModulo
     Top = 56
   end
   object sqsFun: TSQLDataSet
+    Active = True
     CommandText = 'select * from FUNCIONARIO'
     MaxBlobSize = -1
     Params = <>
@@ -370,6 +373,7 @@ object Modulo: TModulo
     Top = 160
   end
   object sdsInc: TSQLDataSet
+    Active = True
     CommandText = 'select * from INCIDENTES'
     MaxBlobSize = -1
     Params = <>
@@ -378,6 +382,7 @@ object Modulo: TModulo
     Top = 208
   end
   object sdsLigacoes: TSQLDataSet
+    Active = True
     CommandText = 'select * from LIGACOES'
     MaxBlobSize = -1
     Params = <>
@@ -386,6 +391,7 @@ object Modulo: TModulo
     Top = 256
   end
   object sdsParceiro: TSQLDataSet
+    Active = True
     CommandText = 'select * from PARCEIRO'
     MaxBlobSize = -1
     Params = <>
@@ -394,6 +400,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
+    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>
@@ -675,6 +682,7 @@ object Modulo: TModulo
     Top = 288
   end
   object sdsResidente: TSQLDataSet
+    Active = True
     CommandText = 'select * from RESIDENTE'
     MaxBlobSize = -1
     Params = <>
@@ -683,6 +691,7 @@ object Modulo: TModulo
     Top = 112
   end
   object sdsSaude: TSQLDataSet
+    Active = True
     CommandText = 'select * from SAUDE'
     MaxBlobSize = -1
     Params = <>
@@ -691,6 +700,7 @@ object Modulo: TModulo
     Top = 168
   end
   object sdsTarefa: TSQLDataSet
+    Active = True
     CommandText = 'select * from TAREFA'
     MaxBlobSize = -1
     Params = <>
@@ -699,6 +709,7 @@ object Modulo: TModulo
     Top = 216
   end
   object sdsVoluntario: TSQLDataSet
+    Active = True
     CommandText = 'select * from VOLUNTARIO'
     MaxBlobSize = -1
     Params = <>
@@ -751,6 +762,7 @@ object Modulo: TModulo
     Top = 112
   end
   object sdsDespesas: TSQLDataSet
+    Active = True
     CommandText = 'select * from DESPESAS'
     MaxBlobSize = -1
     Params = <>
@@ -801,6 +813,7 @@ object Modulo: TModulo
     Top = 304
   end
   object sdsEmail: TSQLDataSet
+    Active = True
     CommandText = 'select * from EMAIL'
     MaxBlobSize = -1
     Params = <>
@@ -863,6 +876,7 @@ object Modulo: TModulo
     Top = 360
   end
   object sdsUser: TSimpleDataSet
+    Active = True
     Aggregates = <>
     Connection = Conexao2
     DataSet.CommandText = 'select * from USUARIOS'
@@ -902,6 +916,7 @@ object Modulo: TModulo
     Top = 360
   end
   object sqlDSLogin: TSQLDataSet
+    Active = True
     CommandText = 'select * from USUARIOS'
     MaxBlobSize = -1
     Params = <>
@@ -934,6 +949,7 @@ object Modulo: TModulo
     end
   end
   object cdsUser: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUser'

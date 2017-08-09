@@ -67,7 +67,7 @@ begin
 Modulo.cdsVoluntario.Edit;
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-          btnAtualizar.Enabled  := False;
+
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -87,7 +87,7 @@ begin
 
           btnInserir.Enabled    := False;
           btnDeletar.Enabled    := False;
-          btnAtualizar.Enabled  := False;
+
           btnEditar.Enabled     := False;
           Direita.Enabled       := False;
           Esquerda.Enabled      := False;
@@ -151,10 +151,8 @@ Modulo.cdsVoluntario.Cancel;
           DBEdit3.Enabled       := False;
           DBEdit4.Enabled       := False;
           DBEdit5.Enabled       := False;
-
           btnInserir.Enabled    := True;
           btnDeletar.Enabled    := True;
-          btnAtualizar.Enabled  := True;
           btnEditar.Enabled     := True;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;

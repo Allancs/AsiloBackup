@@ -4,7 +4,7 @@ object Emails: TEmails
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]
-  Caption = 'Emails'
+  Caption = 'Envio de Email'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,6 +13,7 @@ object Emails: TEmails
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnActivate = FormActivate
   OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   PixelsPerInch = 96
@@ -242,7 +243,7 @@ object Emails: TEmails
     Width = 404
     Height = 353
     Caption = 'LadoEsquerdo'
-    TabOrder = 1
+    TabOrder = 0
     object Label9: TLabel
       Left = 8
       Top = 131
@@ -351,14 +352,14 @@ object Emails: TEmails
       Height = 101
       Lines.Strings = (
         'Menssagem')
-      TabOrder = 0
+      TabOrder = 4
     end
     object Para: TEdit
       Left = 136
       Top = 105
       Width = 225
       Height = 21
-      TabOrder = 1
+      TabOrder = 3
       Text = 'allancolombo@hotmail.com'
     end
     object Nome: TEdit
@@ -374,7 +375,7 @@ object Emails: TEmails
       Top = 65
       Width = 353
       Height = 21
-      TabOrder = 3
+      TabOrder = 1
       Text = 'Assunto'
     end
     object De: TEdit
@@ -382,7 +383,7 @@ object Emails: TEmails
       Top = 24
       Width = 353
       Height = 21
-      TabOrder = 4
+      TabOrder = 0
     end
     object BitBtn2: TBitBtn
       Left = 325
@@ -461,7 +462,7 @@ object Emails: TEmails
     Height = 90
     BiDiMode = bdRightToLeft
     ParentBiDiMode = False
-    TabOrder = 0
+    TabOrder = 1
     object Label11: TLabel
       Left = 8
       Top = 5
@@ -868,13 +869,13 @@ object Emails: TEmails
       Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
-      TabOrder = 0
+      TabOrder = 1
       Visible = False
     end
     object edtPesquisa: TEdit
       Left = 8
       Top = 41
-      Width = 109
+      Width = 169
       Height = 24
       CharCase = ecUpperCase
       Font.Charset = DEFAULT_CHARSET
@@ -883,7 +884,7 @@ object Emails: TEmails
       Font.Name = 'MS Sans Serif'
       Font.Style = []
       ParentFont = False
-      TabOrder = 1
+      TabOrder = 0
       OnChange = edtPesquisaChange
     end
     object Parceiros: TRadioButton
@@ -920,10 +921,11 @@ object Emails: TEmails
     end
     object BitBtn1: TBitBtn
       Left = 240
-      Top = 152
+      Top = 160
       Width = 113
       Height = 33
       Caption = '&Inserir Email'
+      Default = True
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -1209,5 +1211,11 @@ object Emails: TEmails
     OnTimer = Timer1Timer
     Left = 736
     Top = 16
+  end
+  object Tempo: TTimer
+    Tag = 1
+    Interval = 10000
+    Left = 424
+    Top = 240
   end
 end

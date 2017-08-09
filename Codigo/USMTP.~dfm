@@ -865,9 +865,22 @@ object SMTPs: TSMTPs
     Width = 361
     Height = 201
     TabOrder = 2
-    object Oque: TMemo
+    object Label7: TLabel
       Left = 8
       Top = 8
+      Width = 199
+      Height = 16
+      Caption = 'Um pouquinho de Sabedoria'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Oque: TMemo
+      Left = 8
+      Top = 32
       Width = 249
       Height = 81
       Enabled = False
@@ -900,18 +913,22 @@ object SMTPs: TSMTPs
     end
     object OQue2: TMemo
       Left = 8
-      Top = 8
+      Top = 32
       Width = 249
       Height = 81
       Enabled = False
       Lines.Strings = (
-        'O servi'#231'o de Email funciona apenas para o GMAIL.')
+        'O servi'#231'o de Email funciona apenas para o GMAIL.'
+        'SMTP'
+        'smtp.gmail.com'
+        'Porta'
+        '465')
       TabOrder = 3
       Visible = False
     end
     object URL: TEdit
       Left = 8
-      Top = 96
+      Top = 120
       Width = 249
       Height = 21
       TabOrder = 4

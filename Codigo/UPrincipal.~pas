@@ -6,7 +6,8 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, Buttons, ExtCtrls, DBCtrls, Menus,
   OleCtrls, SHDocVw,
-  jpeg,IniFiles;
+  jpeg,IniFiles,
+  DB, DBClient, SimpleDS;
 
 type
   TPrincipal = class(TForm)
@@ -51,7 +52,6 @@ type
     Saude1: TMenuItem;
     incidentes1: TMenuItem;
     UNome: TLabel;
-    Image1: TImage;
     Rela: TMenuItem;
     Check: TTimer;
     Avali: TBitBtn;
@@ -63,6 +63,12 @@ type
     CadastroConta: TMenuItem;
     tipo: TLabel;
     Sair1: TMenuItem;
+    sdsAux: TSimpleDataSet;
+    sdsAuxOBS: TStringField;
+    sdsAuxDATA: TDateField;
+    DataSource1: TDataSource;
+    Image1: TImage;
+    Button1: TButton;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -99,6 +105,7 @@ type
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -356,10 +363,10 @@ Despesas.btnDeletar.Visible := false;
 //Responsavel.btnDeletar.Visible := false;
 //Funcionario.btnDeletar.Visible := false;
 Voluntarios.btnDeletar.Visible := false;
-Email.
 Emails.Mostrar.Visible := false;
 Emails.Ocutar.Visible := false;
 Ser.Visible := false;
+Emails.Baixo.Visible := false;
 
 end;
 end;
@@ -385,5 +392,16 @@ procedure TPrincipal.AvaliClick(Sender: TObject);
 begin
 Avaliacao.Visible := True;
 end;
+
+procedure TPrincipal.Button1Click(Sender: TObject);
+var
+texto : string;
+begin
+     sdsAux.Close;
+     Texto := 'Select OBS, DATA from AVISOS WHERE DATA BETWEEN '+ DateToStr(Date);
+     sdsAux.DataSet.CommandText := Texto;
+     sdsAux.Open;
+end;
+
 
 end.

@@ -1,7 +1,7 @@
 object Login: TLogin
-  Left = 275
-  Top = 175
-  Width = 515
+  Left = 285
+  Top = 183
+  Width = 516
   Height = 389
   BorderIcons = [biSystemMenu]
   Caption = 'Login'
@@ -12,14 +12,12 @@ object Login: TLogin
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
-  OnCreate = FormCreate
-  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Image3: TImage
     Left = 0
     Top = 0
-    Width = 499
+    Width = 500
     Height = 350
     Align = alClient
     Picture.Data = {
@@ -433,5 +431,17 @@ object Login: TLogin
     PasswordChar = '*'
     TabOrder = 1
     Text = 'Pasword'
+  end
+  object BitBtn1: TBitBtn
+    Left = 184
+    Top = 200
+    Width = 129
+    Height = 41
+    Caption = 'Login'
+    Default = True
+    TabOrder = 2
+    OnClick = Image2Click
+    Layout = blGlyphTop
+    NumGlyphs = 4
   end
 end
