@@ -1,6 +1,6 @@
 object Tarefa: TTarefa
-  Left = 229
-  Top = 183
+  Left = 277
+  Top = 139
   Width = 800
   Height = 500
   Caption = 'Tarefa'
@@ -500,6 +500,7 @@ object Tarefa: TTarefa
     Height = 21
     DataField = 'COD_TAREFA'
     DataSource = Modulo.dsTarefa
+    Enabled = False
     TabOrder = 0
   end
   object DBEdit2: TDBEdit
@@ -514,10 +515,11 @@ object Tarefa: TTarefa
   object DBEdit3: TDBEdit
     Left = 8
     Top = 104
-    Width = 134
+    Width = 132
     Height = 21
     DataField = 'DATA'
     DataSource = Modulo.dsTarefa
+    MaxLength = 10
     TabOrder = 2
   end
   object btnGravar: TBitBtn
@@ -535,6 +537,7 @@ object Tarefa: TTarefa
     ParentFont = False
     TabOrder = 3
     Visible = False
+    OnClick = btnGravarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -608,6 +611,7 @@ object Tarefa: TTarefa
     ParentFont = False
     TabOrder = 4
     Visible = False
+    OnClick = btnInserirClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -754,6 +758,7 @@ object Tarefa: TTarefa
     ParentFont = False
     TabOrder = 6
     Visible = False
+    OnClick = btnCancelarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
@@ -884,5 +889,12 @@ object Tarefa: TTarefa
       CCA97ECCA97ECCAA80CBA87CD4B792FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+  end
+  object sqlAux: TSQLQuery
+    MaxBlobSize = -1
+    Params = <>
+    SQLConnection = Modulo.Conexao
+    Left = 528
+    Top = 464
   end
 end

@@ -247,10 +247,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Editar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
@@ -319,10 +319,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Deletar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
@@ -391,10 +391,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Cancelar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
@@ -463,10 +463,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Salvar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
@@ -535,10 +535,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Inserir'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
@@ -607,10 +607,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Anterior'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
@@ -679,10 +679,10 @@ object Voluntarios: TVoluntarios
       Width = 90
       Height = 33
       Caption = '&Proximo'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
@@ -755,94 +755,154 @@ object Voluntarios: TVoluntarios
     object Label5: TLabel
       Left = 8
       Top = 224
-      Width = 25
-      Height = 13
+      Width = 26
+      Height = 15
       Caption = 'Email'
       FocusControl = DBEdit5
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label4: TLabel
       Left = 8
       Top = 184
-      Width = 32
-      Height = 13
+      Width = 33
+      Height = 15
       Caption = 'Celular'
       FocusControl = DBEdit4
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label3: TLabel
       Left = 8
       Top = 144
-      Width = 42
-      Height = 13
+      Width = 38
+      Height = 15
       Caption = 'Telefone'
       FocusControl = DBEdit3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label2: TLabel
       Left = 8
       Top = 104
-      Width = 28
-      Height = 13
+      Width = 27
+      Height = 15
       Caption = 'Nome'
       FocusControl = DBEdit2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label1: TLabel
       Left = 8
       Top = 64
-      Width = 33
-      Height = 13
+      Width = 34
+      Height = 15
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object DBEdit5: TDBEdit
       Left = 8
       Top = 240
       Width = 300
-      Height = 21
+      Height = 23
       DataField = 'EMAIL'
       DataSource = Modulo.dsVoluntario
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
     end
     object DBEdit4: TDBEdit
       Left = 8
       Top = 200
       Width = 300
-      Height = 21
+      Height = 23
       DataField = 'CELULAR'
       DataSource = Modulo.dsVoluntario
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       MaxLength = 14
+      ParentFont = False
       TabOrder = 2
     end
     object DBEdit3: TDBEdit
       Left = 8
       Top = 160
       Width = 300
-      Height = 21
+      Height = 23
       DataField = 'TELEFONE'
       DataSource = Modulo.dsVoluntario
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       MaxLength = 13
+      ParentFont = False
       TabOrder = 1
     end
     object DBEdit2: TDBEdit
       Left = 8
       Top = 120
       Width = 300
-      Height = 21
+      Height = 23
       CharCase = ecUpperCase
       DataField = 'NOME'
       DataSource = Modulo.dsVoluntario
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object DBEdit1: TDBEdit
       Left = 8
       Top = 80
       Width = 33
-      Height = 21
+      Height = 23
       DataField = 'COD_VOLUNTARIO'
       DataSource = Modulo.dsVoluntario
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
     end
   end
@@ -871,6 +931,12 @@ object Voluntarios: TVoluntarios
       Width = 99
       Height = 25
       Caption = 'O Que '#233' Voluntario?'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
       OnClick = OqueeClick
     end
@@ -878,7 +944,13 @@ object Voluntarios: TVoluntarios
       Left = 8
       Top = 120
       Width = 249
-      Height = 21
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 1
       Visible = False
     end
@@ -888,6 +960,11 @@ object Voluntarios: TVoluntarios
       Width = 249
       Height = 81
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       Lines.Strings = (
         ' "o volunt'#225'rio '#233' o jovem ou o adulto que, devido a '
         'seu interesse pessoal '
@@ -896,6 +973,7 @@ object Voluntarios: TVoluntarios
         'alguma, a diversas formas de atividades, '
         'organizadas ou n'#227'o,'
         'de bem estar social, ou outros campos..."')
+      ParentFont = False
       TabOrder = 2
       Visible = False
     end

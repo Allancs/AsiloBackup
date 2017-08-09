@@ -67,6 +67,18 @@ type
     Image1: TImage;
     sdsAuxOBS: TStringField;
     sdsAuxDATA: TDateField;
+    Tarefas: TCheckBox;
+    Aux: TSimpleDataSet;
+    DataSource2: TDataSource;
+    TarefaPop: TGroupBox;
+    DBText3: TDBText;
+    DBText4: TDBText;
+    Label3: TLabel;
+    Label4: TLabel;
+    TarefaP: TButton;
+    TarefaA: TButton;
+    AuxDATA: TDateField;
+    AuxTAREFA: TStringField;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -104,6 +116,8 @@ type
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
     procedure FormActivate(Sender: TObject);
+    procedure TarefaAClick(Sender: TObject);
+    procedure TarefaPClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -149,6 +163,16 @@ begin
       Else
        Begin
       Aviso.Visible := False;
+      End;
+
+       if Tarefas.Checked = true
+     then
+     begin
+           TarefaPop.Visible := True;
+      end
+      Else
+       Begin
+      TarefaPop.Visible := False;
       End;
   end;
 
@@ -302,6 +326,7 @@ begin
                   Rela.Visible := true;
                   SMTP.Visible := true;
                   email.Visible := true;
+                  tipo.visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
                   CadastroAvisos.btnCancelar.visible := true;
@@ -383,7 +408,7 @@ Avaliacao.Visible := True;
 end;
 
 procedure TPrincipal.FormActivate(Sender: TObject);
-Var       TxtConsulta, DtaAtual : String;
+Var       TxtConsulta, TxxtConsulta, DtaAtual : String;
 begin
 
           // Pega a Data
@@ -402,7 +427,23 @@ begin
           sdsAux.Close;
           sdsAux.DataSet.CommandText := TxtConsulta;
           sdsAux.Open;
+          TxxtConsulta :=
+          'Select DATA, TAREFA From TAREFA WHERE DATA >='
+          + QuotedStr(DtaAtual);
+          Aux.Close;
+          Aux.DataSet.CommandText := TxxtConsulta;
+          Aux.Open;
 
+end;
+
+procedure TPrincipal.TarefaAClick(Sender: TObject);
+begin
+Aux.Next;
+end;
+
+procedure TPrincipal.TarefaPClick(Sender: TObject);
+begin
+Aux.Prior;
 end;
 
 end.

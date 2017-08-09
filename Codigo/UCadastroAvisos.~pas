@@ -19,7 +19,6 @@ type
     Esquerda: TSpeedButton;
     sqlAux: TSQLQuery;
     btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
     btnDeletar: TBitBtn;
     btnCancelar: TBitBtn;
     btnGravar: TBitBtn;

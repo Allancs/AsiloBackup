@@ -1,6 +1,6 @@
 object SMTPs: TSMTPs
-  Left = 217
-  Top = 145
+  Left = 235
+  Top = 150
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]

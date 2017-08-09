@@ -1,7 +1,7 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 135
-  Top = 149
+  Left = 215
+  Top = 126
   Height = 574
   Width = 890
   object Conexao: TSQLConnection
@@ -31,7 +31,6 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
-    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -402,7 +401,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
-    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>
@@ -635,6 +633,7 @@ object Modulo: TModulo
     object cdsTarefaDATA: TDateField
       DisplayLabel = 'Data'
       FieldName = 'DATA'
+      EditMask = '!99/99/0000;1;_'
     end
   end
   object dspSaude: TDataSetProvider

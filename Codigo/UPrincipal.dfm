@@ -1,10 +1,10 @@
 object Principal: TPrincipal
-  Left = 274
-  Top = 136
+  Left = 249
+  Top = 138
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
-  ClientHeight = 441
+  ClientHeight = 444
   ClientWidth = 784
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -23,7 +23,7 @@ object Principal: TPrincipal
     Left = 0
     Top = 0
     Width = 784
-    Height = 441
+    Height = 444
     Align = alClient
     Picture.Data = {
       0A544A504547496D616765E5240000FFD8FFE1001845786966000049492A0008
@@ -326,9 +326,9 @@ object Principal: TPrincipal
   object UNome: TLabel
     Left = 1
     Top = 120
-    Width = 45
+    Width = 64
     Height = 20
-    Caption = 'UNome'
+    Caption = 'Nome'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -15
@@ -340,9 +340,9 @@ object Principal: TPrincipal
   object tipo: TLabel
     Left = 1
     Top = 138
-    Width = 45
+    Width = 48
     Height = 20
-    Caption = 'UNome'
+    Caption = 'Tipo'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
     Font.Height = -15
@@ -357,7 +357,7 @@ object Principal: TPrincipal
     Top = 50
     Width = 115
     Height = 33
-    Caption = 'Envio Email'
+    Caption = '&Envio Email'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1366,20 +1366,20 @@ object Principal: TPrincipal
       ParentFont = False
     end
     object px: TButton
-      Left = 192
-      Top = 72
-      Width = 75
-      Height = 25
-      Caption = 'Proximo'
-      TabOrder = 0
-      OnClick = pxClick
-    end
-    object an: TButton
       Left = 272
       Top = 72
       Width = 75
       Height = 25
-      Caption = 'Anterior'
+      Caption = '&Proximo'
+      TabOrder = 0
+      OnClick = pxClick
+    end
+    object an: TButton
+      Left = 192
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = '&Anterior'
       TabOrder = 1
       OnClick = anClick
     end
@@ -1460,7 +1460,7 @@ object Principal: TPrincipal
   object GP1: TGroupBox
     Left = 504
     Top = 96
-    Width = 241
+    Width = 265
     Height = 105
     Caption = 'Selecione os Avisos que seram exibidos na tela'
     Font.Charset = ANSI_CHARSET
@@ -1478,13 +1478,21 @@ object Principal: TPrincipal
       Caption = 'Avisos'
       TabOrder = 0
     end
+    object Tarefas: TCheckBox
+      Left = 8
+      Top = 48
+      Width = 97
+      Height = 17
+      Caption = 'Tarefas'
+      TabOrder = 1
+    end
   end
   object Avali: TBitBtn
     Left = 504
     Top = 50
     Width = 115
     Height = 33
-    Caption = 'Avalia'#231#227'o'
+    Caption = '&Avalia'#231#227'o'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1551,6 +1559,93 @@ object Principal: TPrincipal
       9F7E5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9D8774A08A78A08A78A18A
       77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+  end
+  object TarefaPop: TGroupBox
+    Left = 144
+    Top = 208
+    Width = 353
+    Height = 105
+    Caption = 'Tarefas'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 17
+    Visible = False
+    object DBText3: TDBText
+      Left = 56
+      Top = 24
+      Width = 249
+      Height = 17
+      DataField = 'DATA'
+      DataSource = DataSource2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DBText4: TDBText
+      Left = 56
+      Top = 48
+      Width = 265
+      Height = 17
+      DataField = 'TAREFA'
+      DataSource = DataSource2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 2
+      Top = 23
+      Width = 35
+      Height = 20
+      Caption = 'Data :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 2
+      Top = 47
+      Width = 46
+      Height = 20
+      Caption = 'Tarefa :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object TarefaP: TButton
+      Left = 272
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = '&Proximo'
+      TabOrder = 0
+      OnClick = TarefaPClick
+    end
+    object TarefaA: TButton
+      Left = 192
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = '&Anterior'
+      TabOrder = 1
+      OnClick = TarefaAClick
+    end
   end
   object PoupUP: TTimer
     Interval = 1
@@ -1696,5 +1791,48 @@ object Principal: TPrincipal
     DataSet = sdsAux
     Left = 720
     Top = 8
+  end
+  object Aux: TSimpleDataSet
+    Aggregates = <>
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select DATA, TAREFA from TAREFA'
+    DataSet.MaxBlobSize = -1
+    DataSet.Params = <>
+    Params = <>
+    Left = 752
+    Top = 40
+    object AuxDATA: TDateField
+      FieldName = 'DATA'
+    end
+    object AuxTAREFA: TStringField
+      FieldName = 'TAREFA'
+      Size = 100
+    end
+  end
+  object DataSource2: TDataSource
+    DataSet = Aux
+    Left = 720
+    Top = 40
   end
 end

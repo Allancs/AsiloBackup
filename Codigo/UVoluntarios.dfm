@@ -1,6 +1,6 @@
 object Voluntarios: TVoluntarios
-  Left = 196
-  Top = 129
+  Left = 310
+  Top = 184
   Width = 800
   Height = 500
   Caption = 'Voluntarios'
@@ -11,6 +11,7 @@ object Voluntarios: TVoluntarios
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
@@ -818,6 +819,19 @@ object Voluntarios: TVoluntarios
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 8
+      Top = 8
+      Width = 183
+      Height = 23
+      Caption = 'Cadastro de Voluntarios'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -19
       Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False

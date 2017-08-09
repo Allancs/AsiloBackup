@@ -19,11 +19,11 @@ type
     Esquerda: TSpeedButton;
     sqlAux: TSQLQuery;
     btnEditar: TBitBtn;
-    btnInserir: TBitBtn;
     btnDeletar: TBitBtn;
     btnCancelar: TBitBtn;
     btnGravar: TBitBtn;
     Image1: TImage;
+    btnInserir: TBitBtn;
     procedure btnEditarClick(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnDeletarClick(Sender: TObject);
