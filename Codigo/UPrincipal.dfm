@@ -1,5 +1,5 @@
 object Principal: TPrincipal
-  Left = 130
+  Left = 161
   Top = 141
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
@@ -15,6 +15,7 @@ object Principal: TPrincipal
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnActivate = FormActivate
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -1532,23 +1533,6 @@ object Principal: TPrincipal
       77A18A77A28B77A38B76A28B76A48B75A58B76A58C75A68D74A68D75A78D75A9
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
-  object Button1: TButton
-    Left = 656
-    Top = 56
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 17
-    OnClick = Button1Click
-  end
-  object Edit1: TEdit
-    Left = 304
-    Top = 224
-    Width = 121
-    Height = 21
-    TabOrder = 18
-    Text = #39'09/08/2017'#39
-  end
   object PoupUP: TTimer
     Interval = 1
     OnTimer = PoupUPTimer
@@ -1650,11 +1634,6 @@ object Principal: TPrincipal
       OnClick = Sair1Click
     end
   end
-  object Check: TTimer
-    Interval = 1
-    Left = 632
-    Top = 16
-  end
   object sdsAux: TSimpleDataSet
     Aggregates = <>
     Connection.ConnectionName = 'Asilo'
@@ -1684,8 +1663,8 @@ object Principal: TPrincipal
     DataSet.Params = <>
     DisableStringTrim = True
     Params = <>
-    Left = 704
-    Top = 16
+    Left = 752
+    Top = 8
     object sdsAuxOBS: TStringField
       FieldName = 'OBS'
       Size = 100
@@ -1696,7 +1675,7 @@ object Principal: TPrincipal
   end
   object DataSource1: TDataSource
     DataSet = sdsAux
-    Left = 672
-    Top = 16
+    Left = 720
+    Top = 8
   end
 end

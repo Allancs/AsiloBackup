@@ -53,7 +53,6 @@ type
     incidentes1: TMenuItem;
     UNome: TLabel;
     Rela: TMenuItem;
-    Check: TTimer;
     Avali: TBitBtn;
     px: TButton;
     an: TButton;
@@ -66,10 +65,8 @@ type
     sdsAux: TSimpleDataSet;
     DataSource1: TDataSource;
     Image1: TImage;
-    Button1: TButton;
     sdsAuxOBS: TStringField;
     sdsAuxDATA: TDateField;
-    Edit1: TEdit;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -106,7 +103,7 @@ type
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -143,18 +140,7 @@ CadastroAvisos.Visible := True;
 end;
 
 procedure TPrincipal.PoupUPTimer(Sender: TObject);
-  //var I: Integer;
 begin
-{ for I := 0 to 10 do
-  begin
-      Modulo.cdsAvisos.Next;
-      exit;
-  end;
-    for I := 0 to 10 do
-  begin
-    Modulo.cdsAvisos.Last;
-   exit;
-   end;}
    if AvisosPop.Checked = true
      then
      begin
@@ -396,20 +382,28 @@ begin
 Avaliacao.Visible := True;
 end;
 
-procedure TPrincipal.Button1Click(Sender: TObject);
-var
-texto, data: string;
+procedure TPrincipal.FormActivate(Sender: TObject);
+Var       TxtConsulta, DtaAtual : String;
 begin
-     texto := edit1.Text;
-      sdsAux.Open;
-     data := '"'+DateToStr(Date)+'"';
-     sdsAux.DataSet.CommandText := 'Select OBS, DATA from AVISOS WHERE DATA >='+texto;
-     //sdsAux.DataSet.CommandText := 'Select OBS, DATA from AVISOS WHERE DATA >= '''+ DateToStr(Date)+'');
-    // Edit1.Text := DateToStr(Date);
-     sdsAux.DataSet.Active := true;
-     sdsAux.Active := True;
+          // Pega a Data
+          DtaAtual := DateToStr(Date);
+          // Troca a / por . (Firebird guarda a data com . e nao /)
+          DtaAtual := StringReplace(DtaAtual, '/', '.', [rfreplaceall]);
+
+          // para formatar a data -> FormatDateTime('mm/dd/yyyy', SuaData)
+
+          TxtConsulta :=
+          'SELECT OBS, DATA FROM AVISOS WHERE DATA >= '
+           + QuotedStr(DtaAtual);
+           //+ QuotedStr(DateToStr(DateTimePicker1.DateTime) com troca / por .);
+
+          // Executa
+          sdsAux.Close;
+          sdsAux.DataSet.CommandText := TxtConsulta;
+          sdsAux.Open;
 
 end;
+
 end.
 
 
