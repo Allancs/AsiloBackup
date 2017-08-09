@@ -31,6 +31,7 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
+    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -401,6 +402,7 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
+    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>

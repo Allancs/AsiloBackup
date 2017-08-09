@@ -10,34 +10,47 @@ uses
 
 type
   TResponsavel = class(TForm)
+    DataSource1: TDataSource;
+    sqlAux: TSQLQuery;
+    sdsAux: TSimpleDataSet;
+    dsAux: TDataSource;
+    sdsAuxx: TSimpleDataSet;
+    aux: TDataSource;
+    Image1: TImage;
+    Baixo: TPanel;
+    btnEditar: TBitBtn;
+    btnCancelar: TBitBtn;
+    btnGravar: TBitBtn;
+    btnDeletar: TBitBtn;
+    btnInserir: TBitBtn;
+    Esquerda: TBitBtn;
+    Direita: TBitBtn;
+    LadoEsquerdo: TPanel;
+    DBEdit3: TDBEdit;
+    Label3: TLabel;
+    DBEdit2: TDBEdit;
+    Label2: TLabel;
+    DBEdit4: TDBEdit;
+    Label4: TLabel;
     Label1: TLabel;
     DBEdit1: TDBEdit;
-    DataSource1: TDataSource;
-    Label2: TLabel;
-    DBEdit2: TDBEdit;
-    Label3: TLabel;
-    DBEdit3: TDBEdit;
-    Label4: TLabel;
-    DBEdit4: TDBEdit;
+    Idoso: TGroupBox;
+    Label7: TLabel;
+    edtPesquisa: TEdit;
+    Name: TDBEdit;
+    BitBtn1: TBitBtn;
+    Cod: TDBEdit;
     Label5: TLabel;
     DBEdit5: TDBEdit;
     Label6: TLabel;
     DBEdit6: TDBEdit;
-    GroupBox1: TGroupBox;
-    Label7: TLabel;
-    edtPesquisa: TEdit;
-    sqlAux: TSQLQuery;
-    sdsAux: TSimpleDataSet;
-    dsAux: TDataSource;
-    Name: TDBEdit;
-    BitBtn1: TBitBtn;
-    Cod: TDBEdit;
-    sdsAuxx: TSimpleDataSet;
-    aux: TDataSource;
-    Image1: TImage;
     procedure edtPesquisaChange(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btnInserirClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -58,7 +71,7 @@ var Texto, TSQL, Parametro : String;
  begin
       sdsAux.Close;
 
-      TSQL := 'select NOME from RESIDENTE ';
+      TSQL := 'select COD_IDOSO ,NOME from RESIDENTE ';
       If edtPesquisa.Text = ''
       Then Begin
       Texto := TSQL;
@@ -72,26 +85,6 @@ var Texto, TSQL, Parametro : String;
 
       End;
       sdsAux.Open;
-      //DBEdit2.Text := Cod.Text;
-      //DBEdit3.Text := Name.Text;
-      exit;
-
-   sdsAuxx.Close;
-
-
-      If edtPesquisa.Text = ''
-      Then Begin
-
-      sdsAuxx.DataSet.CommandText := Texto;
-      End
-      Else Begin
-
-      sdsAuxx.DataSet.CommandText := Texto;
-      Parametro := edtPesquisa.Text + '%';
-      sdsAuxx.DataSet.Params.ParamByName('PROCURE').AsString := Parametro;
-
-      End;
-      sdsAuxx.Open;
       //DBEdit2.Text := Cod.Text;
       //DBEdit3.Text := Name.Text;
       exit;
@@ -115,6 +108,84 @@ Then Begin
       Else Begin
       //btnEditar.Enabled := True;;
       End;
+end;
+
+procedure TResponsavel.btnInserirClick(Sender: TObject);
+Var NReg : integer;
+begin
+
+          btnInserir.Enabled    := False;
+          btnDeletar.Enabled    := False;
+          Idoso.Enabled := True;
+
+          btnEditar.Enabled     := False;
+          Direita.Enabled       := False;
+          Esquerda.Enabled      := False;
+
+          //DBEdit2.Enabled       := True;
+          DBEdit6.Enabled       := True;
+          DBEdit4.Enabled       := True;
+          DBEdit5.Enabled       := True;
+          btnGravar.Enabled      := True;
+          sqlAux.Close;
+          sqlAux.SQL.Clear;
+          sqlAux.SQL.Add('SELECT MAX(COD_LIGACOES) AS ULTIMO FROM LIGACOES');
+
+          sqlAux.Open;
+           If sqlAux.FieldByName('ULTIMO').Value = Null
+           Then NReg :=1
+           Else NReg := sqlAux.FieldByName('ULTIMO').Value + 1;
+           Modulo.cdsLigacoes.Insert;
+           Modulo.cdsLigacoesCOD_LIGACOES.Value := NReg;
+
+
+           DBEdit4.SetFocus;
+
+end;
+
+procedure TResponsavel.btnEditarClick(Sender: TObject);
+begin
+Modulo.cdsLigacoes.Edit;
+          btnInserir.Enabled    := False;
+          btnDeletar.Enabled    := False;
+
+          btnEditar.Enabled     := False;
+          Direita.Enabled       := False;
+          Esquerda.Enabled      := False;
+
+          DBEdit4.Enabled       := True;
+          DBEdit5.Enabled       := True;
+          DBEdit6.Enabled       := True;
+          Idoso.Enabled       := True;
+
+          btnGravar.Enabled      := True;
+end;
+
+procedure TResponsavel.btnGravarClick(Sender: TObject);
+begin
+Modulo.cdsLigacoes.Post;
+
+         Modulo.cdsLigacoes.ApplyUpdates(-1);
+
+         btnCancelar.Click;
+end;
+
+procedure TResponsavel.btnCancelarClick(Sender: TObject);
+begin
+Modulo.cdsLigacoes.Cancel;
+          DBEdit4.Enabled       := False;
+          DBEdit5.Enabled       := False;
+          DBEdit6.Enabled       := False;
+          Idoso.Enabled       := False;
+
+          btnInserir.Enabled    := True;
+          btnDeletar.Enabled    := True;
+          btnEditar.Enabled     := True;
+          Direita.Enabled       := True;
+          Esquerda.Enabled      := True;
+
+          // Ligar o Gravar
+          btnGravar.Enabled      := False;
 end;
 
 end.

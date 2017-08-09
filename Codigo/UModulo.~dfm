@@ -1,8 +1,8 @@
 object Modulo: TModulo
   OldCreateOrder = False
-  Left = 231
-  Top = 162
-  Height = 571
+  Left = 135
+  Top = 149
+  Height = 574
   Width = 890
   object Conexao: TSQLConnection
     ConnectionName = 'Asilo'
@@ -31,7 +31,6 @@ object Modulo: TModulo
     Top = 456
   end
   object sdsAviso: TSQLDataSet
-    Active = True
     CommandText = 'select * from AVISOS'
     MaxBlobSize = -1
     Params = <>
@@ -326,11 +325,13 @@ object Modulo: TModulo
     object cdsParceiroTELEFONE: TStringField
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
+      EditMask = '!\(99\)0000-0000;1;_'
       Size = 13
     end
     object cdsParceiroCELULAR: TStringField
       DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
+      EditMask = '!\(99\)\90000-0000;1;_'
       Size = 14
     end
     object cdsParceiroEMAIL: TStringField
@@ -400,7 +401,6 @@ object Modulo: TModulo
     Top = 16
   end
   object sdsProfisional: TSQLDataSet
-    Active = True
     CommandText = 'select * from PROFISSIONAIS'
     MaxBlobSize = -1
     Params = <>
@@ -428,11 +428,13 @@ object Modulo: TModulo
     object cdsProfisionalTELEFONE: TStringField
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
+      EditMask = '!\(99\)0000-0000;1;_'
       Size = 10
     end
     object cdsProfisionalCELULAR: TStringField
       DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
+      EditMask = '!\(99\)\90000-0000;1;_'
       Size = 10
     end
     object cdsProfisionalEEMPRESA: TStringField
@@ -467,7 +469,7 @@ object Modulo: TModulo
     Top = 216
   end
   object dsVoluntario: TDataSource
-    DataSet = sdsVoluntario
+    DataSet = cdsVoluntario
     Left = 776
     Top = 288
   end
@@ -663,11 +665,13 @@ object Modulo: TModulo
     object cdsVoluntarioTELEFONE: TStringField
       DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
+      EditMask = '!\(99\)0000-0000;1;_'
       Size = 13
     end
     object cdsVoluntarioCELULAR: TStringField
       DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
+      EditMask = '!\(99\)\90000-0000;1;_'
       Size = 14
     end
     object cdsVoluntarioEMAIL: TStringField

@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 203
-  Top = 153
+  Left = 130
+  Top = 141
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -1533,13 +1533,21 @@ object Principal: TPrincipal
       8D75A98E73AB8F749D7D5CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
   end
   object Button1: TButton
-    Left = 664
+    Left = 656
     Top = 56
     Width = 75
     Height = 25
     Caption = 'Button1'
     TabOrder = 17
     OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 304
+    Top = 224
+    Width = 121
+    Height = 21
+    TabOrder = 18
+    Text = #39'09/08/2017'#39
   end
   object PoupUP: TTimer
     Interval = 1
@@ -1649,9 +1657,32 @@ object Principal: TPrincipal
   end
   object sdsAux: TSimpleDataSet
     Aggregates = <>
-    Connection = Modulo.Conexao
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
+    DataSet.CommandText = 'select OBS, DATA from AVISOS'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
+    DisableStringTrim = True
     Params = <>
     Left = 704
     Top = 16

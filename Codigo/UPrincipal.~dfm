@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 232
-  Top = 154
+  Left = 203
+  Top = 153
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -1649,7 +1649,6 @@ object Principal: TPrincipal
   end
   object sdsAux: TSimpleDataSet
     Aggregates = <>
-    Connection = Modulo.Conexao
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
     Params = <>

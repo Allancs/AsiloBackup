@@ -64,11 +64,12 @@ type
     tipo: TLabel;
     Sair1: TMenuItem;
     sdsAux: TSimpleDataSet;
-    sdsAuxOBS: TStringField;
-    sdsAuxDATA: TDateField;
     DataSource1: TDataSource;
     Image1: TImage;
     Button1: TButton;
+    sdsAuxOBS: TStringField;
+    sdsAuxDATA: TDateField;
+    Edit1: TEdit;
     procedure EnvClick(Sender: TObject);
     procedure VolClick(Sender: TObject);
     procedure AClick(Sender: TObject);
@@ -292,7 +293,8 @@ end;
 
 procedure TPrincipal.pxClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Prior;
+sdsAux.Prior;
+//Modulo.cdsAviso.Prior;
 end;
 
 procedure TPrincipal.Button2Click(Sender: TObject);
@@ -375,7 +377,8 @@ end;
 
 procedure TPrincipal.anClick(Sender: TObject);
 begin
-Modulo.cdsAviso.Next;
+sdsAux.Next;
+//Modulo.cdsAviso.Next;
 end;
 
 procedure TPrincipal.CadastroContaClick(Sender: TObject);
@@ -395,13 +398,22 @@ end;
 
 procedure TPrincipal.Button1Click(Sender: TObject);
 var
-texto : string;
+texto, data: string;
 begin
-     sdsAux.Close;
-     Texto := 'Select OBS, DATA from AVISOS WHERE DATA BETWEEN '+ DateToStr(Date);
-     sdsAux.DataSet.CommandText := Texto;
-     sdsAux.Open;
+     texto := edit1.Text;
+      sdsAux.Open;
+     data := '"'+DateToStr(Date)+'"';
+     sdsAux.DataSet.CommandText := 'Select OBS, DATA from AVISOS WHERE DATA >='+texto;
+     //sdsAux.DataSet.CommandText := 'Select OBS, DATA from AVISOS WHERE DATA >= '''+ DateToStr(Date)+'');
+    // Edit1.Text := DateToStr(Date);
+     sdsAux.DataSet.Active := true;
+     sdsAux.Active := True;
+
 end;
-
-
 end.
+
+
+
+
+
+

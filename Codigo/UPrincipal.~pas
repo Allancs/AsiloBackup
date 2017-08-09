@@ -397,10 +397,11 @@ procedure TPrincipal.Button1Click(Sender: TObject);
 var
 texto : string;
 begin
-     sdsAux.Close;
-     Texto := 'Select OBS, DATA from AVISOS WHERE DATA BETWEEN '+ DateToStr(Date);
+sdsAux.Open;
+
+     Texto := 'Select OBS, DATA from AVISOS WHERE DATA = '+ DateToStr(Date);
      sdsAux.DataSet.CommandText := Texto;
-     sdsAux.Open;
+       sdsAux.Close;
 end;
 
 
