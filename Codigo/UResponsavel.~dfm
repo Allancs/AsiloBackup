@@ -1,6 +1,6 @@
 object Responsavel: TResponsavel
-  Left = 202
-  Top = 134
+  Left = 194
+  Top = 112
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]
@@ -748,7 +748,7 @@ object Responsavel: TResponsavel
   object LadoEsquerdo: TPanel
     Left = 5
     Top = 8
-    Width = 404
+    Width = 396
     Height = 353
     TabOrder = 1
     object Label3: TLabel
@@ -992,7 +992,28 @@ object Responsavel: TResponsavel
   object sdsAux: TSimpleDataSet
     Active = True
     Aggregates = <>
-    Connection = Modulo.Conexao
+    Connection.ConnectionName = 'Asilo'
+    Connection.DriverName = 'Interbase'
+    Connection.GetDriverFunc = 'getSQLDriverINTERBASE'
+    Connection.LibraryName = 'dbexpint.dll'
+    Connection.LoginPrompt = False
+    Connection.Params.Strings = (
+      'DriverName=Interbase'
+      'Database=C:\Asilo\Banco\BANCO.FDB'
+      'RoleName=RoleName'
+      'User_Name=sysdba'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=1'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    Connection.VendorLib = 'C:\Windows\System32\FBCLIENT.DLL'
+    Connection.Connected = True
     DataSet.CommandText = 'select COD_IDOSO, NOME from RESIDENTE'
     DataSet.MaxBlobSize = -1
     DataSet.Params = <>
@@ -1006,9 +1027,7 @@ object Responsavel: TResponsavel
     Top = 8
   end
   object sdsAuxx: TSimpleDataSet
-    Active = True
     Aggregates = <>
-    Connection = Modulo.Conexao
     DataSet.CommandText = 'select COD_IDOSO, NOME from RESIDENTE'
     DataSet.DataSource = dsAux
     DataSet.MaxBlobSize = -1

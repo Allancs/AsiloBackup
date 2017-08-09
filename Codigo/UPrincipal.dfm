@@ -1,6 +1,6 @@
 object Principal: TPrincipal
-  Left = 161
-  Top = 141
+  Left = 274
+  Top = 136
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
@@ -326,30 +326,31 @@ object Principal: TPrincipal
   object UNome: TLabel
     Left = 1
     Top = 120
-    Width = 60
+    Width = 45
     Height = 20
     Caption = 'UNome'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
-    Font.Height = -16
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsBold]
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold, fsItalic]
     ParentFont = False
     Transparent = True
   end
   object tipo: TLabel
     Left = 1
     Top = 138
-    Width = 53
-    Height = 16
+    Width = 45
+    Height = 20
     Caption = 'UNome'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWhite
-    Font.Height = -13
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsBold]
+    Font.Height = -15
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold, fsItalic]
     ParentFont = False
     Transparent = True
+    Visible = False
   end
   object Env: TBitBtn
     Left = 384
@@ -357,10 +358,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = 'Envio Email'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
@@ -430,10 +431,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Avisos'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
@@ -502,10 +503,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Contas'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
@@ -575,10 +576,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Despesas'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
@@ -648,10 +649,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Funcionarios'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
@@ -721,10 +722,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Incidentes'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 5
@@ -793,10 +794,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Responsaveis'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 6
@@ -866,10 +867,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Parceiros'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 7
@@ -939,10 +940,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Profissionais'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 8
@@ -1012,10 +1013,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Residente'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 9
@@ -1085,10 +1086,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Sa'#250'de'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 10
@@ -1157,10 +1158,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Tarefa'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 11
@@ -1229,10 +1230,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Voluntario'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 12
@@ -1302,11 +1303,11 @@ object Principal: TPrincipal
     Width = 353
     Height = 105
     Caption = 'Avisos  '
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
-    Font.Name = 'MS Sans Serif'
-    Font.Style = [fsItalic]
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
     ParentFont = False
     TabOrder = 13
     Visible = False
@@ -1317,11 +1318,11 @@ object Principal: TPrincipal
       Height = 17
       DataField = 'DATA'
       DataSource = DataSource1
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsItalic]
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       ParentFont = False
     end
     object DBText1: TDBText
@@ -1331,26 +1332,38 @@ object Principal: TPrincipal
       Height = 17
       DataField = 'OBS'
       DataSource = DataSource1
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
-      Font.Name = 'MS Sans Serif'
-      Font.Style = [fsItalic]
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       ParentFont = False
     end
     object Label1: TLabel
       Left = 2
       Top = 23
-      Width = 52
+      Width = 35
       Height = 20
       Caption = 'Data :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label2: TLabel
       Left = 2
       Top = 47
-      Width = 55
+      Width = 43
       Height = 20
       Caption = 'Aviso :'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object px: TButton
       Left = 192
@@ -1377,10 +1390,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = '&Servidor SMTP'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 14
@@ -1450,6 +1463,12 @@ object Principal: TPrincipal
     Width = 241
     Height = 105
     Caption = 'Selecione os Avisos que seram exibidos na tela'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 15
     object AvisosPoP: TCheckBox
       Left = 8
@@ -1466,10 +1485,10 @@ object Principal: TPrincipal
     Width = 115
     Height = 33
     Caption = 'Avalia'#231#227'o'
-    Font.Charset = DEFAULT_CHARSET
+    Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
-    Font.Name = 'MS Sans Serif'
+    Font.Name = 'Arial Narrow'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 16

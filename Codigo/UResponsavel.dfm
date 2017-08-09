@@ -249,10 +249,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Editar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 0
@@ -321,10 +321,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Cancelar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
@@ -393,10 +393,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Salvar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 2
@@ -465,10 +465,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Deletar'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 3
@@ -536,10 +536,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Inserir'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 4
@@ -608,10 +608,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Anterior'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 5
@@ -679,10 +679,10 @@ object Responsavel: TResponsavel
       Width = 90
       Height = 33
       Caption = '&Proximo'
-      Font.Charset = DEFAULT_CHARSET
+      Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
       Font.Height = -11
-      Font.Name = 'MS Sans Serif'
+      Font.Name = 'Arial Narrow'
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 6
@@ -754,59 +754,101 @@ object Responsavel: TResponsavel
     object Label3: TLabel
       Left = 187
       Top = 136
-      Width = 57
-      Height = 13
+      Width = 56
+      Height = 15
       Caption = 'Nome Idoso'
       FocusControl = DBEdit3
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label2: TLabel
       Left = 187
       Top = 96
-      Width = 33
-      Height = 13
+      Width = 34
+      Height = 15
       Caption = 'C'#243'digo'
       FocusControl = DBEdit2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label4: TLabel
       Left = 8
       Top = 48
-      Width = 93
-      Height = 13
+      Width = 88
+      Height = 15
       Caption = 'Nome Responsavel'
       FocusControl = DBEdit4
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label1: TLabel
       Left = 8
       Top = 8
-      Width = 33
-      Height = 13
+      Width = 34
+      Height = 15
       Caption = 'C'#243'digo'
       FocusControl = DBEdit1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label5: TLabel
       Left = 8
       Top = 216
-      Width = 24
-      Height = 13
+      Width = 23
+      Height = 15
       Caption = 'Fone'
       FocusControl = DBEdit5
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object Label6: TLabel
       Left = 8
       Top = 256
-      Width = 32
-      Height = 13
+      Width = 33
+      Height = 15
       Caption = 'Celular'
       FocusControl = DBEdit6
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object DBEdit3: TDBEdit
       Left = 187
       Top = 152
       Width = 129
-      Height = 21
+      Height = 23
       DataField = 'NOME'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 3
       Visible = False
     end
@@ -814,10 +856,16 @@ object Responsavel: TResponsavel
       Left = 187
       Top = 112
       Width = 17
-      Height = 21
+      Height = 23
       DataField = 'COD_IDOSO'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 4
       Visible = False
     end
@@ -825,20 +873,32 @@ object Responsavel: TResponsavel
       Left = 8
       Top = 64
       Width = 305
-      Height = 21
+      Height = 23
       DataField = 'NOMER'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 0
     end
     object DBEdit1: TDBEdit
       Left = 8
       Top = 24
       Width = 33
-      Height = 21
+      Height = 23
       DataField = 'COD_LIGACOES'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 5
     end
     object Idoso: TGroupBox
@@ -847,19 +907,37 @@ object Responsavel: TResponsavel
       Width = 169
       Height = 121
       Caption = 'Pesquisar Residente'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
+      ParentFont = False
       TabOrder = 6
       object Label7: TLabel
         Left = 8
         Top = 16
-        Width = 28
-        Height = 13
+        Width = 27
+        Height = 15
         Caption = 'Nome'
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
+        ParentFont = False
       end
       object edtPesquisa: TEdit
         Left = 8
         Top = 32
         Width = 153
-        Height = 21
+        Height = 23
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 0
         OnChange = edtPesquisaChange
       end
@@ -867,9 +945,15 @@ object Responsavel: TResponsavel
         Left = 40
         Top = 56
         Width = 121
-        Height = 21
+        Height = 23
         DataField = 'NOME'
         DataSource = dsAux
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 1
       end
       object BitBtn1: TBitBtn
@@ -878,11 +962,11 @@ object Responsavel: TResponsavel
         Width = 129
         Height = 33
         Caption = '&Inserir Cadastro'
-        Font.Charset = DEFAULT_CHARSET
+        Font.Charset = ANSI_CHARSET
         Font.Color = clWindowText
         Font.Height = -13
-        Font.Name = 'MS Sans Serif'
-        Font.Style = []
+        Font.Name = 'Arial Narrow'
+        Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
         OnClick = BitBtn1Click
@@ -948,9 +1032,15 @@ object Responsavel: TResponsavel
         Left = 8
         Top = 56
         Width = 25
-        Height = 21
+        Height = 23
         DataField = 'COD_IDOSO'
         DataSource = dsAux
+        Font.Charset = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Arial Narrow'
+        Font.Style = []
+        ParentFont = False
         TabOrder = 3
       end
     end
@@ -958,22 +1048,34 @@ object Responsavel: TResponsavel
       Left = 8
       Top = 232
       Width = 174
-      Height = 21
+      Height = 23
       DataField = 'FONE'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       MaxLength = 13
+      ParentFont = False
       TabOrder = 1
     end
     object DBEdit6: TDBEdit
       Left = 8
       Top = 272
       Width = 165
-      Height = 21
+      Height = 23
       DataField = 'CELULAR'
       DataSource = DataSource1
       Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Arial Narrow'
+      Font.Style = []
       MaxLength = 14
+      ParentFont = False
       TabOrder = 2
     end
   end

@@ -1,6 +1,6 @@
 object Voluntarios: TVoluntarios
-  Left = 146
-  Top = 112
+  Left = 196
+  Top = 129
   Width = 800
   Height = 500
   Caption = 'Voluntarios'
@@ -798,9 +798,9 @@ object Voluntarios: TVoluntarios
       Width = 300
       Height = 21
       DataField = 'EMAIL'
-      DataSource = DataSource1
+      DataSource = Modulo.dsVoluntario
       Enabled = False
-      TabOrder = 0
+      TabOrder = 3
     end
     object DBEdit4: TDBEdit
       Left = 8
@@ -808,9 +808,10 @@ object Voluntarios: TVoluntarios
       Width = 300
       Height = 21
       DataField = 'CELULAR'
-      DataSource = DataSource1
+      DataSource = Modulo.dsVoluntario
       Enabled = False
-      TabOrder = 1
+      MaxLength = 14
+      TabOrder = 2
     end
     object DBEdit3: TDBEdit
       Left = 8
@@ -818,9 +819,10 @@ object Voluntarios: TVoluntarios
       Width = 300
       Height = 21
       DataField = 'TELEFONE'
-      DataSource = DataSource1
+      DataSource = Modulo.dsVoluntario
       Enabled = False
-      TabOrder = 2
+      MaxLength = 13
+      TabOrder = 1
     end
     object DBEdit2: TDBEdit
       Left = 8
@@ -829,9 +831,9 @@ object Voluntarios: TVoluntarios
       Height = 21
       CharCase = ecUpperCase
       DataField = 'NOME'
-      DataSource = DataSource1
+      DataSource = Modulo.dsVoluntario
       Enabled = False
-      TabOrder = 3
+      TabOrder = 0
     end
     object DBEdit1: TDBEdit
       Left = 8
@@ -839,7 +841,7 @@ object Voluntarios: TVoluntarios
       Width = 33
       Height = 21
       DataField = 'COD_VOLUNTARIO'
-      DataSource = DataSource1
+      DataSource = Modulo.dsVoluntario
       Enabled = False
       TabOrder = 4
     end
@@ -866,7 +868,7 @@ object Voluntarios: TVoluntarios
     object Oquee: TButton
       Left = 8
       Top = 160
-      Width = 113
+      Width = 99
       Height = 25
       Caption = 'O Que '#233' Voluntario?'
       TabOrder = 0
@@ -897,11 +899,6 @@ object Voluntarios: TVoluntarios
       TabOrder = 2
       Visible = False
     end
-  end
-  object DataSource1: TDataSource
-    DataSet = Modulo.cdsVoluntario
-    Left = 520
-    Top = 232
   end
   object sqlAux: TSQLQuery
     MaxBlobSize = -1

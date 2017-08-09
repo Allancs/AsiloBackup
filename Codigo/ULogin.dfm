@@ -12,6 +12,7 @@ object Login: TLogin
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Image3: TImage
@@ -419,7 +420,13 @@ object Login: TLogin
     Left = 176
     Top = 152
     Width = 145
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 0
     Text = 'Username'
   end
@@ -427,7 +434,13 @@ object Login: TLogin
     Left = 176
     Top = 176
     Width = 145
-    Height = 21
+    Height = 23
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = []
+    ParentFont = False
     PasswordChar = '*'
     TabOrder = 1
     Text = 'Pasword'
@@ -437,8 +450,14 @@ object Login: TLogin
     Top = 200
     Width = 129
     Height = 41
-    Caption = 'Login'
+    Caption = '&Login'
     Default = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial Narrow'
+    Font.Style = [fsBold]
+    ParentFont = False
     TabOrder = 2
     OnClick = Image2Click
     Layout = blGlyphTop

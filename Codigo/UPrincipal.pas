@@ -302,6 +302,7 @@ begin
                   Rela.Visible := true;
                   SMTP.Visible := true;
                   email.Visible := true;
+                  tipo.visible := true;
                   CadastroAvisos.btnEditar.visible := true;
                   CadastroAvisos.btnInserir.visible := true;
                   CadastroAvisos.btnCancelar.visible := true;
@@ -385,6 +386,7 @@ end;
 procedure TPrincipal.FormActivate(Sender: TObject);
 Var       TxtConsulta, DtaAtual : String;
 begin
+
           // Pega a Data
           DtaAtual := DateToStr(Date);
           // Troca a / por . (Firebird guarda a data com . e nao /)

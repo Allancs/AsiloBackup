@@ -103,6 +103,7 @@ type
     procedure CadastroContaClick(Sender: TObject);
     procedure Sair1Click(Sender: TObject);
     procedure AvaliClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -139,24 +140,7 @@ CadastroAvisos.Visible := True;
 end;
 
 procedure TPrincipal.PoupUPTimer(Sender: TObject);
-Var       TxtConsulta, DtaAtual : String;
 begin
-          // Pega a Data
-          DtaAtual := DateToStr(Date);
-          // Troca a / por . (Firebird guarda a data com . e nao /)
-          DtaAtual := StringReplace(DtaAtual, '/', '.', [rfreplaceall]);
-
-          // para formatar a data -> FormatDateTime('mm/dd/yyyy', SuaData)
-
-          TxtConsulta :=
-          'SELECT OBS, DATA FROM AVISOS WHERE DATA = '
-           + QuotedStr(DtaAtual);
-           //+ QuotedStr(DateToStr(DateTimePicker1.DateTime) com troca / por .);
-
-          // Executa
-          sdsAux.Close;
-          sdsAux.DataSet.CommandText := TxtConsulta;
-          sdsAux.Open;
    if AvisosPop.Checked = true
      then
      begin
@@ -398,7 +382,30 @@ begin
 Avaliacao.Visible := True;
 end;
 
-d.
+procedure TPrincipal.FormActivate(Sender: TObject);
+Var       TxtConsulta, DtaAtual : String;
+begin
+
+          // Pega a Data
+          DtaAtual := DateToStr(Date);
+          // Troca a / por . (Firebird guarda a data com . e nao /)
+          DtaAtual := StringReplace(DtaAtual, '/', '.', [rfreplaceall]);
+
+          // para formatar a data -> FormatDateTime('mm/dd/yyyy', SuaData)
+
+          TxtConsulta :=
+          'SELECT OBS, DATA FROM AVISOS WHERE DATA >= '
+           + QuotedStr(DtaAtual);
+           //+ QuotedStr(DateToStr(DateTimePicker1.DateTime) com troca / por .);
+
+          // Executa
+          sdsAux.Close;
+          sdsAux.DataSet.CommandText := TxtConsulta;
+          sdsAux.Open;
+
+end;
+
+end.
 
 
 

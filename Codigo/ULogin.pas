@@ -33,7 +33,8 @@ type
 
 var
   Login: TLogin;
-  User : string;
+  User, Nome : string;
+
 implementation
 
 uses UModulo, UPrincipal;
@@ -95,6 +96,7 @@ begin
            Principal.UNome.Caption  := 'Usuário , ' + Modulo.sqlDSLogin.Fields[1].AsString;
            Principal.Tipo.Caption := 'Permissão : '+Modulo.sqlDSLogin.Fields[2].AsString;
            User := Modulo.sqlDSLogin.Fields[2].AsString;
+           Principal.Caption := 'ASILO RECANTO DAS FLORES - Usuário : '+Modulo.sqlDSLogin.Fields[1].AsString;
 
 end;
 

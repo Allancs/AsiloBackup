@@ -1,10 +1,10 @@
 object SMTPs: TSMTPs
-  Left = 189
+  Left = 217
   Top = 145
   Width = 800
   Height = 500
   BorderIcons = [biSystemMenu]
-  Caption = 'Cadastro de Servidor SMTP '
+  Caption = 'Cadastro de servidor Smtp '
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -932,6 +932,30 @@ object SMTPs: TSMTPs
       Width = 249
       Height = 21
       TabOrder = 4
+      Visible = False
+    end
+    object OBS: TButton
+      Left = 256
+      Top = 160
+      Width = 75
+      Height = 25
+      Caption = 'Observa'#231#227'o'
+      TabOrder = 5
+      OnClick = OBSClick
+    end
+    object OQue3: TMemo
+      Left = 8
+      Top = 32
+      Width = 249
+      Height = 81
+      Enabled = False
+      Lines.Strings = (
+        'Para o pleno funcionamento libere a op'#231#227'o de '
+        'aplicativos menos seguro do'
+        'seu GMAIL.'
+        'Link abaixo para acessar as configura'#231#245'es.'
+        '')
+      TabOrder = 6
       Visible = False
     end
   end
