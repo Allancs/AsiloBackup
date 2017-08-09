@@ -1,0 +1,13 @@
+//Saudes.btnDeletar.Visible := false;
+//Incidentes.btnDeletar.Visible := false;
+Tarefa.btnDeletar.Visible := false;
+CadastroAvisos.btnDeletar.Visible := false;
+//Parceiros.btnDeletar.Visible := false;
+Contas.btnDeletar.Visible := false;
+Despesas.btnDeletar.Visible := false;
+//Responsavel.btnDeletar.Visible := false;
+//Funcionario.btnDeletar.Visible := false;
+Voluntarios.btnDeletar.Visible := false;
+Emails.Mostrar.Visible := false;
+Emails.Ocultar.Visible := false;
+Ser.Visible := false;
