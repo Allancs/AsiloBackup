@@ -510,6 +510,7 @@ object Tarefa: TTarefa
     Height = 21
     DataField = 'TAREFA'
     DataSource = Modulo.dsTarefa
+    Enabled = False
     TabOrder = 1
   end
   object DBEdit3: TDBEdit
@@ -519,6 +520,7 @@ object Tarefa: TTarefa
     Height = 21
     DataField = 'DATA'
     DataSource = Modulo.dsTarefa
+    Enabled = False
     MaxLength = 10
     TabOrder = 2
   end
@@ -685,6 +687,7 @@ object Tarefa: TTarefa
     ParentFont = False
     TabOrder = 5
     Visible = False
+    OnClick = btnDeletarClick
     Glyph.Data = {
       F6060000424DF606000000000000360000002800000018000000180000000100
       180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF

@@ -321,6 +321,9 @@ begin
         End;
          If (ULogin.User = 'admin')
              Then Begin
+             Tarefa.btnDeletar.Enabled := true;
+             Tarefa.btnEditar.Enabled := true;
+             Tarefa.btnCancelar.Enabled := true;
                   Cadastro.Visible := true;
                   Conta.Visible := true;
                   Rela.Visible := true;
@@ -349,6 +352,9 @@ begin
                   ser.visible := true;
                   avali.visible := true;
                   CadastroConta.Visible := true;
+                  Tarefa.btnInserir.Enabled := true;
+                  Tarefa.btnGravar.Enabled := true;
+                  
 
 
                     end

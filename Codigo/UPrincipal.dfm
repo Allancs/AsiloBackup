@@ -326,7 +326,7 @@ object Principal: TPrincipal
   object UNome: TLabel
     Left = 1
     Top = 120
-    Width = 64
+    Width = 36
     Height = 20
     Caption = 'Nome'
     Font.Charset = ANSI_CHARSET
@@ -340,7 +340,7 @@ object Principal: TPrincipal
   object tipo: TLabel
     Left = 1
     Top = 138
-    Width = 48
+    Width = 27
     Height = 20
     Caption = 'Tipo'
     Font.Charset = ANSI_CHARSET
@@ -1302,7 +1302,7 @@ object Principal: TPrincipal
     Top = 96
     Width = 353
     Height = 105
-    Caption = 'Avisos  '
+    Caption = '[ Avisos ]'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
@@ -1462,7 +1462,7 @@ object Principal: TPrincipal
     Top = 96
     Width = 265
     Height = 105
-    Caption = 'Selecione os Avisos que seram exibidos na tela'
+    Caption = '[ Selecione os Avisos que seram exibidos na tela ]'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -1565,7 +1565,7 @@ object Principal: TPrincipal
     Top = 208
     Width = 353
     Height = 105
-    Caption = 'Tarefas'
+    Caption = '[ Tarefas ]'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -16

@@ -1,10 +1,10 @@
 object Principal: TPrincipal
   Left = 249
-  Top = 141
+  Top = 138
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Principal'
-  ClientHeight = 441
+  ClientHeight = 444
   ClientWidth = 784
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -23,7 +23,7 @@ object Principal: TPrincipal
     Left = 0
     Top = 0
     Width = 784
-    Height = 441
+    Height = 444
     Align = alClient
     Picture.Data = {
       0A544A504547496D616765E5240000FFD8FFE1001845786966000049492A0008
@@ -326,7 +326,7 @@ object Principal: TPrincipal
   object UNome: TLabel
     Left = 1
     Top = 120
-    Width = 64
+    Width = 36
     Height = 20
     Caption = 'Nome'
     Font.Charset = ANSI_CHARSET
@@ -340,7 +340,7 @@ object Principal: TPrincipal
   object tipo: TLabel
     Left = 1
     Top = 138
-    Width = 48
+    Width = 27
     Height = 20
     Caption = 'Tipo'
     Font.Charset = ANSI_CHARSET
@@ -1593,7 +1593,7 @@ object Principal: TPrincipal
       Top = 48
       Width = 265
       Height = 17
-      DataField = 'OBS'
+      DataField = 'TAREFA'
       DataSource = DataSource2
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -1831,6 +1831,7 @@ object Principal: TPrincipal
     end
   end
   object DataSource2: TDataSource
+    DataSet = Aux
     Left = 720
     Top = 40
   end

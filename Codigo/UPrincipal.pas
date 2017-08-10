@@ -321,6 +321,9 @@ begin
         End;
          If (ULogin.User = 'admin')
              Then Begin
+             Tarefa.btnDeletar.Enabled := true;
+             Tarefa.btnEditar.Enabled := true;
+             Tarefa.btnCancelar.Enabled := true;
                   Cadastro.Visible := true;
                   Conta.Visible := true;
                   Rela.Visible := true;

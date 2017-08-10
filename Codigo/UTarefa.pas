@@ -29,6 +29,7 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure btnDeletarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -89,6 +90,27 @@ Modulo.cdsTarefa.Cancel;
           Direita.Enabled       := True;
           Esquerda.Enabled      := True;
           btnGravar.Enabled      := False;
+end;
+
+procedure TTarefa.btnDeletarClick(Sender: TObject);
+begin
+          DBEdit2.Enabled       := False;
+          DBEdit3.Enabled       := False;
+
+
+ If
+           MessageDlg ('Você tem certeza que deseja excluir?',
+                       mtWarning,
+                       [mbyes,mbno],
+                       0)
+          = mryes Then Begin
+                         Modulo.cdsTarefa.Delete;
+                         Modulo.cdsTarefa.ApplyUpdates(-1);
+                         ShowMessage ('Registro Excluido com sucesso!');
+                       End
+                  Else Begin
+                          ShowMessage ('Nenhum registro deletado!');
+                       End;
 end;
 
 end.
