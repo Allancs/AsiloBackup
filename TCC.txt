@@ -1,32 +1,44 @@
-1. Introdução
-	Tema
-        Software de Gestão de Asilo
+Allan Colombo
+Asilo
+Nome :
+Delphi 7 :
+Firebird 3.0 :
+Email :
+Relatorio :
 
-        
+Pesquisa
 
-        
-	Problema
-	Justificativa
-	Metodologia
+Asilo
 
-2. Fundamentação Teórica
-	Tema Base	
-	Linguagem de Programação
-	Banco de dados
-	Outras ferramentas (engenharia, APIs)
+Gerenciamento
 
-3. Engenharia
-	Requisitos
-	Diagramas
+Gerenciamento de Asilo
 
-4. Desenvolvimento
-	Telas da aplicação
+Links
+Quanto custa um Asilo
+http://casaerepouso.com.br/internacao/quanto-custa-um-asilo/
 
-5. Conclusão
+População Brasileira de Idosos
+https://noticias.uol.com.br/cotidiano/ultimas-noticias/2016/12/02/brasil-teve-aumento-da-populacao-idosa-acima-da-media-mundial.htm
 
-TEMA
+Como abrir uma Casa de Repouso
+http://www.novonegocio.com.br/ideias-de-negocios/como-abrir-uma-casa-de-repouso/
 
-O software de gestão de asilo, ele tem um papel muito importante desde sua criação até no armazenamento de todas as informações,
-ele ira computadoriza um papel que ja é exercico em qualquer Asilo em sí, ira simplifica a rotina da empresa em forma digital,
-fornecendo busca rapida a dados de (Funcionarios, Idosos, Agenda e Gastos), tudo ficara armazenado para pesquisa dos dados,
-assim simplificando não so na adiministração mais agilizando processos que seriam escritos em papel.
+Dados IBGE Figura 01
+http://saladeimprensa.ibge.gov.br/noticias.html?view=noticia&id=1&idnoticia=3326&busca=1&t=sis-2016-67-7-idosos-ocupados-comecaram-trabalhar-14-anos
+
+Dados Expectativa de vida
+http://sigaolide.blogspot.com.br/2014/11/segundo-ibge-numero-de-idosos-deve.html
+Diferença Gerenciamento/ Gestão / Adiministração
+http://www.ignicaodigital.com.br/gestao-gerenciamento-e-administracao/
+
+
+
+Como funciona um asilo? Quem paga? Quanto paga? Que tipo de serviços tem? E se o velho nao tem parente?
+
+O valor é estabelecido conforme o grau de dependencia do idoso. Quem paga geralmente é o familiar ou um responsável,
+porém paga-se com a própria aposentadoria do idoso. Um asilo bom oferece fisioterapia, atendimento médico, psicologo,
+terapeuta ocupacional, cuidados de enfermagem, alimentação balanceada, cama macia, roupa lavada, medicamentos, 
+passeios externos e diversas atividades culturais. Se o idoso não tem parentes, ele deve ser encaminhado pela 
+prefeitura e o asilo será o responsável por ele. Mas não se fala mais asilo e sim ILPI 
+(Instituição de Longa Permanencia para Idosos). Visite um, vc vai gostar.
